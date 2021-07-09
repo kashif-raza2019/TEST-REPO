@@ -13,6 +13,4 @@ This process is for practice
 ### You Should Submit Your Code with Your Directory Name by 12:00 PM  of 10th July 2021
 For Further Tutorial on above process: Check https://youtu.be/yr6IzOGoMsQ
 
-A Quick Note on how to create folder in Github have a look below:<br />
-<img src='' align="center">
 
