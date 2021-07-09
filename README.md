@@ -10,7 +10,7 @@ and add your files there!
 - Open a Pull Request in Original Repo
 - Then wait for it to merge
 This process is for practice
-### You Should Submit Your Code with Your Directory Name by 12:00 PM  of 10th July 2021
+### You Should Submit Your Code with Your Directory Name by 12:30 PM  of 10th July 2021
 For Further Tutorial on above process: Check https://youtu.be/yr6IzOGoMsQ
 
 
