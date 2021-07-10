@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <title>Dynamic Table</title>
+
+	<nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand text-light mb-0 h1 col-sm" role="button">BACK</a>
+        <span class="navbar-brand text-light mb-0 h1 col-sm ml-5">SUPERUSER</span>
+        <span class="col-3"></span>
+    </nav>
+    <script type="text/javascript">
+      function addRows() {
+        var table = document.getElementById("emptbl");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+        var row = table.insertRow(rowCount);
+        for (var i = 0; i < cellCount; i++) {
+          var cell = "cell" + i;
+          cell = row.insertCell(i);
+          var copycel = document.getElementById("col" + i).innerHTML;
+          cell.innerHTML = copycel;
+          
+            
+          
+        }
+      }
+      function deleteRows() {
+        alert("Are you sure you want to delete");
+        var table = document.getElementById("emptbl");
+        var rowCount = table.rows.length;
+        if (rowCount > "2") {
+          var row = table.deleteRow(rowCount - 1);
+          rowCount--;
+        } else {
+          alert("There should be atleast one row");
+        }
+      }
+    </script>
+	
+	<style>
+#emptbl {
+  table-layout: auto;
+  text-align: center;
+}
+
+	</style>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <table id="emptbl">
+		
+        <tr>
+          <th>Programme Code</th>
+          <th> Programme Name </th>
+          <th>Year of Revision</th>
+          <th>    Percentage </th>
+		  <th>Link of Document</th>
+        </tr>
+        <tr>
+			<td id="col0">
+				<select name="department[]" id="dept">
+				  <option value="0">Select </option>
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				</select>
+			  </td>
+          <td id="col1"><input type="text" name="empname[]" value="" /></td>
+         
+          <td id="col2">
+            <select name="department[]" id="abcd">
+              <option value="0">Select </option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">C</option>
+            </select>
+          </td>
+		  <td id="col3"><input type="text" name="abc[]" value="" /></td>
+		  <td id="col4"><input type="text" name="phone[]" value="" /></td>
+        </tr>
+      
+	</table>
+      <table>
+        <tr>
+          <td><input type="button" value="Add Row" onclick="addRows()" /></td>
+          <td>
+            <input type="button" value="Delete Row" onclick="deleteRows()" />
+          </td>
+          <td><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
