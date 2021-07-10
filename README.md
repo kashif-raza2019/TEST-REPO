@@ -10,7 +10,15 @@ and add your files there!
 - Open a Pull Request in Original Repo
 - Then wait for it to merge
 This process is for practice
-### You Should Submit Your Code with Your Directory Name by 12:30 PM  of 10th July 2021
-For Further Tutorial on above process: Check https://youtu.be/yr6IzOGoMsQ
+## You can check your & your teammate's work here! (Ranked By Their Creative Work)
+- <a href='https://kashif-raza2019.github.io/TEST-REPO/Anmol%20Gupta/Table.html'>Anmol Gupta</a>
+- <a href='https://kashif-raza2019.github.io/TEST-REPO/Rishi%20Gupta/table.html'>Rishi Gupta</a>
+- <a href='https://kashif-raza2019.github.io/TEST-REPO/Anurag%20Shukla/homepage.html'>Anurag Shukla</a>
+- <a href='https://kashif-raza2019.github.io/TEST-REPO/Milisha%20Gupta/'>Milisha Gupta</a>
+- <a href='https://kashif-raza2019.github.io/TEST-REPO/Aarushi%20Jain/table.html'>Aarushi Jain</a>
+- <a href=''>Manasi Pagare</a>
 
+Soon You All Will be Notified Regarding Your Works!
+
+Thank You 😊
 
