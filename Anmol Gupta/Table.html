@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dynamic Table">
+    <title>Dynamic-Table</title>
+
+    <!-- Linking -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/css/all.min.css"
+        integrity="sha512-9my9Mb2+0YO+I4PUCSwUYO7sEK21Y0STBAiFEYoWtd2VzLEZZ4QARDrZ30hdM1GlioHJ8o8cWQiy8IAb1hy/Hg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #091921;
+            font-family: 'Baloo 2', cursive;
+        }
+        .container{
+            padding: 0 10%;
+            margin: 45px auto 0;
+        }
+        .heading {
+            font-size: 50px;
+            text-align: center;
+            color: rgba(174, 241, 15, 0.952);
+            margin-bottom: 40px;
+        }
+        .table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table thead{
+            background-color: #ff105e;
+        }
+        .table thead tr th{
+            font-size: 19px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.35px;
+            color: #ffff;
+            opacity: 1;
+            padding: 15px;
+            vertical-align: top;
+            border: 2px solid black;
+        }
+        .table tbody tr td{
+            font-size: 17px;
+            letter-spacing: 0.35px;
+            font-weight: normal;
+            color: #ffff;
+            background-color:#ff3772;
+            padding: 8px;
+            text-align: center;
+            border: 2px solid black;
+        }
+        .table tbody tr:hover{
+            transform: scale(1.06);
+        }
+        .table tbody tr td input{
+            color:black;
+            background-color: #ffff;
+            text-align: center;
+            border-radius: 5px;
+            height: 40px;
+        }
+
+        /* .table thead tr th button{
+            font-size: 20px;
+            /* margin: 5px;
+        */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Dynamic Table</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Programme Code of Revised Syllabus</th>
+                    <th>Programme Name of Revised Syllabus</th>
+                    <th>Year of Revision</th>
+                    <th>Percentage of Syllabus content added or replaced</th>
+                    <th>Link of relavent document</th>
+                    <th>
+                        <button class="btn btn-success" onclick="create_tr('table_body')">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+                <tr>
+                    <td data-label="Programme Code of Revised Syllabus">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                title="Please select an item in the list">
+                                Select
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-label="Programme Name of Revised Syllabus"><input type="text" class="form_control"
+                            placeholder="Programme Name"></td>
+                    <td data-label="Year of Revision">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-label="Percentage of Syllabus content added or replaced"><input type="text"
+                            class="form_control" placeholder="Percentage"></td>
+                    <td data-label="Link of relavent document"><input type="text" class="form_control"
+                            placeholder="Link of relavent document"></td>
+                    <td data-label="ADD"><button class="btn btn-danger" onclick="remove_tr(this)"><i
+                                class="fas fa-minus"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- Js file -->
+    <script>
+        function create_tr(table_id) {
+                let table_body = document.getElementById(table_id),
+                    first_tr = table_body.firstElementChild
+                tr_clone = first_tr.cloneNode(true);
+
+                table_body.append(tr_clone);
+
+                clean_first_tr(table_body.firstElementChild);
+            }
+
+            function clean_first_tr(firstTr) {
+                let children = firstTr.children;
+
+                children = Array.isArray(children) ? children : Object.values(children);
+                children.forEach(x => {
+                    if (x !== firstTr.lastElementChild) {
+                        x.firstElementChild.value = '';
+
+                    }
+                });
+            }
+
+
+
+            function remove_tr(This) {
+                if (This.closest('tbody').childElementCount == 1) {
+                    alert("You Don't have Permission to Delete This ?");
+                } else {
+                    alert("Are you sure you want to delete it?");
+                    This.closest('tr').remove();
+                }
+            }
+    </script>
+</body>
+
+</html>
